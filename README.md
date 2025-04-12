@@ -2,6 +2,12 @@
 
 A sleek, dark-themed portfolio website with a rich, dark purple accent color scheme, animated background effects, and modern UI features.
 
+## Live Website
+
+Visit my portfolio website live at: [https://shraflub28.github.io/portfolio/](https://shraflub28.github.io/portfolio/)
+
+The website is hosted using GitHub Pages, allowing easy access to view my skills, projects, and contact information online.
+
 ## Features
 
 - Responsive design that works on all devices
@@ -24,9 +30,11 @@ A sleek, dark-themed portfolio website with a rich, dark purple accent color sch
 
 ## How to Use
 
-1. Simply open the `index.html` file in your browser to view the portfolio.
-2. No server or dependencies required - it's all vanilla HTML, CSS, and JavaScript.
-3. Scroll through the sections to explore your skills and projects.
+1. Visit the live website at [https://shraflub28.github.io/portfolio/](https://shraflub28.github.io/portfolio/)
+2. Alternatively, you can open the `index.html` file locally in your browser to view the portfolio.
+3. No server or dependencies required - it's all vanilla HTML, CSS, and JavaScript.
+4. Scroll through the sections to explore skills and projects.
+5. The source code is available at [GitHub repository](https://github.com/Shraflub28/portfolio)
 
 ## Hidden Features 🥚
 
