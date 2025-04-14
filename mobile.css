@@ -1,0 +1,211 @@
+/* Mobile Optimizations */
+
+/* Base optimizations for mobile */
+@media (max-width: 768px) {
+    /* Reduce or eliminate animations */
+    body::after,
+    body::before,
+    section::after,
+    .profile-picture,
+    .profile-picture::before,
+    .profile-picture::after {
+        animation: none !important;
+    }
+    
+    /* Reduce shadow complexity */
+    section, 
+    .project, 
+    .video-item,
+    .contact-method,
+    .tool-item {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* Reduce or eliminate background effects */
+    body::after {
+        opacity: 0.3 !important;
+        background-image: none !important;
+    }
+    
+    /* Simplify background gradients */
+    body::before {
+        background: rgba(28, 28, 37, 0.95) !important;
+        background-size: 100% 100% !important;
+    }
+    
+    /* Improve readability and layout */
+    .container {
+        padding-top: 1rem;
+        gap: 2rem;
+    }
+    
+    /* Improve header sizing */
+    .name {
+        font-size: 2rem !important;
+    }
+    
+    .username {
+        font-size: 1.5rem !important;
+    }
+    
+    .tagline {
+        font-size: 1rem !important;
+    }
+    
+    /* More efficient layout for projects and videos */
+    .projects-grid,
+    .video-showcase {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Optimize iframes to reduce layout shifts */
+    .youtube-embed {
+        height: 250px !important;
+    }
+    
+    /* Better touch targets for links */
+    .project-link,
+    .video-link,
+    .social-icon,
+    .contact-method {
+        padding: 10px !important;
+    }
+    
+    /* Optimize floating navigation */
+    .floating-nav {
+        bottom: 1rem !important;
+        top: auto !important;
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        flex-direction: row !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .floating-nav ul {
+        flex-direction: row !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Reduce hover effect complexity */
+    .project:hover,
+    .video-item:hover,
+    .contact-method:hover,
+    .tool-item:hover {
+        transform: translateY(-2px) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    /* Optimize profile picture for mobile */
+    .profile-picture {
+        box-shadow: 0 0 20px rgba(109, 40, 217, 0.3) !important;
+        background: var(--accent-color) !important;
+    }
+    
+    /* Disable complex animations on hover */
+    .project-link::before,
+    .video-link::before,
+    .contact-method::before,
+    .social-icon::before {
+        display: none !important;
+    }
+    
+    /* Reduce card complexity */
+    .card::before,
+    .project::before,
+    .project-img::after {
+        opacity: 0 !important;
+    }
+    
+    /* Hide scroll indicator on mobile */
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
+/* Extreme optimizations for very small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem !important;
+    }
+    
+    .profile-picture {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto 1.5rem !important;
+    }
+    
+    section {
+        padding: 1.5rem !important;
+    }
+    
+    .video-item,
+    .project,
+    .contact-method {
+        border-radius: 0.8rem !important;
+    }
+    
+    .header-skills {
+        flex-wrap: wrap !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    /* Even more simplified background */
+    body::before, 
+    body::after {
+        opacity: 0.2 !important;
+    }
+    
+    /* Reduce margin and padding */
+    header {
+        padding: 2rem 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    section {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Smaller text */
+    body {
+        font-size: 14px !important;
+    }
+}
+
+/* Optimize for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Performance class added by JS when page is fully loaded */
+.page-loaded .profile-picture,
+.page-loaded .name,
+.page-loaded .username,
+.page-loaded .tagline,
+.page-loaded .header-skills {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Additional optimizations for mobile devices */
+.mobile-device .particle {
+    display: none !important;
+}
+
+.mobile-device section {
+    will-change: auto !important;
+}
+
+.mobile-device .video-item,
+.mobile-device .project {
+    will-change: auto !important;
+    transform: none !important;
+} 
